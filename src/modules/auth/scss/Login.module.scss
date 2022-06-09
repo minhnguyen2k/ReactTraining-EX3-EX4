@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo {
+  max-width: 250px;
+  margin: 32px;
+}
+form {
+  min-width: 500px;
+}
+.error {
+  margin: 10px 120px;
+  display: block;
+}
+.field-name {
+  display: inline-block;
+  min-width: 120px;
+}
+.btn {
+  border-radius: 10px;
+  margin: 10px 120px;
+  padding: 5px 20px;
+}
