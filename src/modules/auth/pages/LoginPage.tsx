@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { Action } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { API_PATHS } from '../../../configs/api';
-import loginStyle from '../scss/Login.module.scss';
+import loginStyle from '../scss/Auth.module.scss';
 import { ROUTES } from '../../../configs/routes';
 import logo from '../../../logo-420-x-108.png';
 import { ILoginParams } from '../../../models/auth';
@@ -16,6 +16,7 @@ import { RESPONSE_STATUS_SUCCESS } from '../../../utils/httpResponseCode';
 import { fetchThunk } from '../../common/redux/thunk';
 import LoginForm from '../components/LoginForm';
 import { setUserInfo } from '../redux/authReducer';
+import { Link } from 'react-router-dom';
 
 const LoginPage: FC = () => {
   const dispatch = useDispatch<ThunkDispatch<AppState, null, Action<string>>>();
@@ -43,6 +44,7 @@ const LoginPage: FC = () => {
     <div className={loginStyle.container}>
       <img src={logo} alt="" className={loginStyle.logo} />
       <LoginForm onLogin={handleLogin} errorMessage={errorMessage} />
+      <Link to="/sign-up">Sign Up</Link>
     </div>
   );
 };

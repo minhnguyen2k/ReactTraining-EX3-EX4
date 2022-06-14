@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { ILoginParams, ILoginValidation } from '../../../models/auth';
-import loginStyle from '../scss/Login.module.scss';
+import loginStyle from '../scss/Auth.module.scss';
 import { validateLogin, validLogin } from '../utils';
 
 interface Props {
