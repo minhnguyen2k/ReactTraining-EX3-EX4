@@ -1,6 +1,5 @@
 import { Box, Button, MenuItem } from '@mui/material';
 import { Form, Formik } from 'formik';
-import { values } from 'lodash';
 import React, { FC, useMemo, useState } from 'react';
 import * as yup from 'yup';
 import { IGenderParams, ILocationParams, ISignUpParams } from '../../../models/auth';

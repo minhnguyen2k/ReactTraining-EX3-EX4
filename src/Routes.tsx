@@ -3,6 +3,8 @@ import { Route, Switch, useLocation } from 'react-router-dom';
 import { ROUTES } from './configs/routes';
 import SignUpPage from './modules/auth/pages/SignUpPage';
 import ProtectedRoute from './modules/common/components/ProtectedRoute';
+import PhotoPage from './modules/photo/pages/PhotoPage';
+import PayrollTransactionsPage from './modules/transaction/pages/PayrollTransactionsPage';
 
 const HomePage = lazy(() => import('./modules/home/pages/HomePage'));
 const ContactPage = lazy(() => import('./modules/home/pages/ContactPage'));
@@ -18,6 +20,8 @@ export const Routes = () => {
         <ProtectedRoute path={ROUTES.home} component={HomePage} />
         <Route path={ROUTES.contact} component={ContactPage} />
         <Route path={ROUTES.signUp} component={SignUpPage} />
+        <Route path={ROUTES.photo} component={PhotoPage} />
+        <Route path={ROUTES.transaction} component={PayrollTransactionsPage} />
         <Route path="/" component={LoginPage} />
       </Switch>
     </Suspense>

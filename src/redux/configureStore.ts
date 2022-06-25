@@ -11,9 +11,7 @@ import storage from 'redux-persist/lib/storage/session';
 export const history = createBrowserHistory();
 
 const composeEnhancers =
-  (typeof window !== 'undefined' &&
-    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
+  (typeof window !== 'undefined' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const persistConfig = {
   key: 'root',
@@ -23,10 +21,7 @@ const persistConfig = {
 export default function configureStore(preloadedState: any) {
   const sagaMiddleware = createSagaMiddleware();
 
-  const persistedReducer = persistReducer(
-    persistConfig,
-    createRootReducer(history),
-  );
+  const persistedReducer = persistReducer(persistConfig, createRootReducer(history));
 
   const store = createStore(
     persistedReducer, // root reducer with router state

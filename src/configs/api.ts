@@ -23,4 +23,6 @@ export const API_PATHS = {
   signUp: `${getBaseUrl(APIService.auth)}/register`,
   userProfile: `${getBaseUrl(APIService.public)}/user`,
   getLocation: `${getBaseUrl(APIService.public)}/location`,
+  getPhotos: 'https://jsonplaceholder.typicode.com/photos?_start=0&_end=10',
+  getPayrollTransactions: './fake-data.json',
 };
